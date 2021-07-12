@@ -1,0 +1,358 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+@import "native.css";
+// Our variables
+$base-font-family: 'Open Sans', sans-serif;
+$heading-font-family: 'Open Sans', sans-serif;
+
+$base-font-size:   14px;
+$small-font-size:  $base-font-size * 0.928;
+$large-font-size:  $base-font-size * 1.857;
+$base-line-height: 1.5;
+
+$twitter-color: #55acee;
+$facebook-color: #3b5998;
+$google-color:#dd4b39;
+$hackerearth-color: #323754;
+$codechef-color:#8a7967;
+$github-color:#999999;
+$linkedin-color:#0976b4;
+
+$spacing-unit:     30px;
+
+$background-color: #e6e6e6;
+$foreground-color: #fff;
+$brand-color:      #111;
+
+$grey-color:       #888;
+$grey-color-light: lighten($grey-color, 30%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$text-color:  #444;
+$text-color-heading:  #515151;
+$text-color-light: #6a6a6a;
+$text-color-dark: #444;
+$text-color-link: #21759b;
+
+$footer-back-color: #111;
+$header-back-color: #111;
+$sidebar-back-color: #111;
+
+$btn-green-color : #5CB85C;
+$btn-blue-color: #3b83c0;
+
+h1{
+    font-size: $base-font-size * 2.1 ;
+    
+}
+h2{
+    font-size: $base-font-size * 1.8;
+    
+}
+h3{
+    font-size: $base-font-size * 1.6;
+    
+}
+h4{
+    font-size: $base-font-size * 1.4;
+    
+}
+h5{
+    font-size: $base-font-size * 1.1;
+    
+}
+h6{
+    font-size: $base-font-size * 0.8;
+    
+}
+h1,h2,h3,h4,h5,h6{
+  // margin-top:20px;
+  // margin-bottom: 20px;
+  font-weight: bold;
+  small{
+    font-size: $base-font-size * 0.9;
+  }
+}
+body{
+    background-color: $background-color;
+    font-family: $base-font-family;
+    color:$text-color;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    .container{
+      background-color: $foreground-color;
+    }
+}
+p{
+  line-height: inherit;
+}
+section{
+  margin-bottom: 70px;
+  div.app, div.web{
+    margin-bottom:50px;
+  }
+  .header{
+    padding: 80px;
+    background-position: 90% 10%;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+    color: white;
+    font-size:2em;
+    margin-right: -28.571px;
+    margin-left: -28.571px;
+    &.android{
+      background-image: url('/assets/images/android-header.png');
+      background-color: #009688;
+    }
+    &.web{
+      background-image: url('/assets/images/web-header.png');
+      background-color: #3F51B5;
+    }
+  }
+
+}
+#page{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+  padding: 0 2.857142857rem;
+}
+.heading{
+  font-weight: bold;
+  color:$text-color-heading;
+  font-size: $large-font-size;
+  line-height: 0.6;
+}
+.small{
+    font-size: $small-font-size;
+}
+.main-heading{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+a{
+  color:$text-color-link;
+  &:hover{
+    color:darken($text-color-link,20%);
+  }
+  .heading{
+    color:$text-color;
+    &:hover{
+      color:$text-color-link;
+    }
+  }
+}
+.menu-container{
+  margin-top:4rem;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+.main-menu{
+  list-style: none;
+  display: flex;
+  margin: 0;
+  .menu-item{
+    padding-top:10px;
+    padding-bottom:10px;
+    float: left;
+    vertical-align: middle;
+    margin-right:20px;
+    text-transform: uppercase;
+    a{
+      color:$text-color-light;
+      text-decoration: none;
+      &:hover{
+        color:$text-color-dark;
+      }
+    }
+    .active{
+      color:$text-color-dark;
+      font-weight: bold;
+    }
+  }
+}
+.main-menu-vertical{
+  display: block;
+  .menu-item{
+    float: none;
+    a{
+
+      &:hover{
+
+      }
+    }
+    .active{
+
+    }
+  }
+}
+.centered{
+  text-align:center;
+}
+@media screen and (max-width: 768px) {
+  .menu-container{
+    margin-top:4rem;
+    border-top: 0px;
+    border-bottom: 0px;
+    text-align: center;
+  }
+  .main-heading{
+    text-align: center;
+  }
+  #page{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+}
+@media screen and (min-width: 769px){
+  .main-menu-vertical{
+    display: none;
+  }
+}
+.share-content{
+  border-top:1px solid #dedede;
+  padding-top: 10px;
+  margin-top:20px;
+}
+.share{
+  padding:5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: lighten(#ccc,12%);
+  // color: darken(#ccc,1%)
+}
+.site-footer{
+  border-top:1px solid #dedede;
+  padding-top: 10px;
+  margin-top:20px;
+  padding-bottom: 10px;
+  font-size: 0.8em;
+}
+ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+ol{
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+ul ul, ol ul {
+   list-style-type: circle;
+   list-style-position: inside;
+   margin-left: 15px;
+}
+ol ol, ul ol {
+   list-style-type: lower-latin;
+   list-style-position: inside;
+   margin-left: 15px;
+}
+.slick-slide{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+#resume{
+  .title{
+    color: #00695c;
+  }
+}
+.resume-heading{
+  font-family: 'Ubuntu', sans-serif;
+  h1{
+    font-size: 3em;
+  }
+  p{
+    font-size: 1.1em;
+  }
+}
+.tm-60{
+  margin-top: 60px;
+}
+.contact-list{
+  list-style: none;
+  .item{
+    margin-bottom: 5px;
+    span{
+      vertical-align: middle;
+      // background-color: #009688;
+      padding: 5px;
+      margin-right: 5px;
+    }
+    a, a:hover, a:visited{
+      text-decoration: none;
+    }
+  }
+}
+.certificate-item, .experience-item, .education-item, .achievement-item{
+  margin-bottom: 20px;
+}
+.project-image{
+    margin-bottom: 20px;
+}
+
+//for resume page progress
+.tooltip{
+  position:relative;
+  float:right;
+}
+.tooltip > .tooltip-inner {background-color: #eebf3f; padding:5px 15px; color:rgb(23,44,66); font-weight:bold; font-size:13px;}
+.popOver + .tooltip > .tooltip-arrow {	border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #eebf3f;}
+
+
+.progress{
+  height: 10px;
+  border-radius:0;
+  overflow:visible;
+}
+.progress-bar{
+   background:rgb(23,44,60);
+  -webkit-transition: width 1.5s ease-in-out;
+  transition: width 1.5s ease-in-out;
+}
+
+
+.responsibilities{
+	// list-style: none;
+	margin-bottom: 20px;
+	.responsibility{
+
+	}
+}
+
+.achievements{
+	list-style: none;
+	margin-bottom: 20px;
+	.achievement{
+
+	}
+}
+
+.mt-20{
+	margin-top:20px;
+}
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }

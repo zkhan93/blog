@@ -1,0 +1,13 @@
+_site
+.sass-cache
+/**/*.*~
+/**/*.class
+/assets/codes/c/*
+/assets/codes/java/*
+/assets/codes/python/*
+!*.c
+!*.py
+!*.java
+.jekyll-cache/*
+vendor/
+.vscode/

@@ -1,0 +1,31 @@
+
+			
+				<div class="category">Android</div>
+				<ul>
+				{% for posts in site.categories.android%}
+					<li><a href="{{posts.url}}" title="{{posts.title}}">{{posts.title}}</a> <div class="date">{{posts.date | date: "%b %-d, %Y" }}</div></li>
+				{% endfor%}
+				</ul>
+				<hr/>
+				<div class="category">C</div>
+				<ul>
+				{% for posts in site.categories.c%}
+					<li><a href="{{posts.url}}" title="{{posts.title}}">{{posts.title}}</a> <div class="date">{{posts.date | date: "%b %-d, %Y" }}</div></li>
+				{% endfor%}
+				</ul>
+				<hr/>
+				<div class="category">Java</div>
+				<ul>
+				{% for posts in site.categories.java%}
+					<li><a href="{{posts.url}}" title="{{posts.title}}">{{posts.title}}</a><div class="date">{{posts.date | date: "%b %-d, %Y" }}</div></li>
+				{% endfor%}
+				</ul>
+				<hr/>
+				<div class="category">Others</div>
+				<ul>
+				{% for posts in site.categories.others%}
+					<li><a href="{{posts.url}}" title="{{posts.title}}">{{posts.title}}</a><div class="date">{{posts.date | date: "%b %-d, %Y" }}</div></li>
+				{% endfor%}
+				</ul>
+			
+		
